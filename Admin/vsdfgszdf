@@ -1,0 +1,37 @@
+// Profile pic
+        if (!empty($_FILES['profile_pic']['name'])) 
+        {
+            $profile_pic = "Uploads/" . basename($_FILES['profile_pic']['name']);
+
+            if (move_uploaded_file($_FILES['profile_pic']['tmp_name'], $profile_pic)) 
+            {
+                // echo "Profile pic uploaded: $profile_pic<br>";
+            } 
+            else 
+            {
+                // echo "Profile pic is not uploaded: $profile_pic<br>";
+                echo "<script> alert('Profile Picture is not set!') </script>";
+            }
+        }
+        else{
+            $profile_pic = $admin['admin_profile_pic']; 
+        }
+
+        // Background pic
+        if (!empty($_FILES['background_pic']['name'])) 
+        {
+
+            $background_pic = "Uploads/" . basename($_FILES['background_pic']['name']);
+
+            if (move_uploaded_file($_FILES['background_pic']['tmp_name'], $background_pic)) 
+            {
+                // echo "Background pic uploaded: $background_pic<br>";
+            } 
+            else {
+                // echo "Background pic is not uploaded: $profile_pic<br>";
+                echo "<script> alert('Background Profile Picture is not set!'); </script>";
+            }
+        }
+        else{
+                $background_pic = $admin['admin_profile_bg'];
+        }
