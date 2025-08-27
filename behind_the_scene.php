@@ -19,7 +19,6 @@ include 'connection.php';
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -753,11 +752,11 @@ include 'connection.php';
             if ($reel_result->num_rows > 0) {
 
                 while ($rowr = $reel_result->fetch_assoc()) {
-                        $reel_id        = $rowr['id'];
+                        $reel_id        = $rowr['reel_id'];
                         $reel_title     = $rowr['reel_title'];
                         $reel_subtitle  = $rowr['reel_subtitle'];
-                        $reel_imageLink = $rowr['reel_image_link'];
-                        $reel_videoLink = $rowr['reel_video_link'];
+                        $reel_imageLink = $rowr['reel_imageLink'];
+                        $reel_videoLink = $rowr['reel_videoLink'];
                 ?>
 
                 <div class="swiper-slide">
@@ -806,8 +805,8 @@ include 'connection.php';
             while ($rowr = $reel_result->fetch_assoc()) {
                 $reel_title     = $rowr['reel_title'];
                 $reel_subtitle  = $rowr['reel_subtitle'];
-                $reel_imageLink = $rowr['reel_image_link'];
-                $reel_videoLink = $rowr['reel_video_link'];
+                $reel_imageLink = $rowr['reel_imageLink'];
+                $reel_videoLink = $rowr['reel_videoLink'];
         ?>
       
       <div class="card">

@@ -1046,6 +1046,18 @@ include 'connection.php';
                                             </div>
                                         </div>
 
+                                          <div class="contact-form-body">
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-12">
+                                                    <input type="tel" name="contact-no" id="contact-no"
+                                                        class="form-control" placeholder="Whatsapp Contact"
+                                                        oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+                                                        pattern="^\+?[1-9]\d{6,14}$" maxlength="10" required>
+                                            
+                                                    </div>
+                                                </div>
+                                        </div>
+
                                         <div class="row">
                                             <fieldset class="mb-6">
                                                 <legend>  Pick a vibe:  </legend>

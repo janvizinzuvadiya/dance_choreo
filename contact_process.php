@@ -7,11 +7,12 @@ include 'connection.php';
         $email = $_POST['contact-email'];
         $projectType = $_POST['projectType'];
         $hearAbout = $_POST['hearAbout'];
+        $contactno = $_POST['contact-no'];
         $vibes = $_POST['vibes']; // This will be comma-separated values
         $message = $_POST['contact-message'];
 
-        $stmt = $conn->prepare("INSERT INTO visitors (name, email, heard_about, project_type, message, vibe) VALUES (?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssss", $name, $email, $hearAbout, $projectType, $message, $vibes);
+        $stmt = $conn->prepare("INSERT INTO visitors (name, email, heard_about, project_type, message, vibe ,wp_no) VALUES (?, ?, ?, ?, ?, ? ,?)");
+        $stmt->bind_param("sssssss", $name, $email, $hearAbout, $projectType, $message, $vibes,$contactno);
 
         if ($stmt->execute()) 
         {
