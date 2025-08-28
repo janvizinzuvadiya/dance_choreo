@@ -153,9 +153,15 @@
                         <p>Home</p>
                     </a>
                 </li>
+                  <li class="active">
+                    <a href="dance_styles.php">
+                        <i class="pe-7s-map-marker"></i>
+                        <p>Specializations</p>
+                    </a>
+                </li>
                 <li>
                     <a href="gallery.php">
-                        <i class="pe-7s-note2"></i>
+                        <i class="pe-7s-photo"></i>
                         <p>Gallery</p>
                     </a>
                 </li>
@@ -167,14 +173,20 @@
                 </li>
                 <li>
                     <a href="icons.php">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
+                        <i class="pe-7s-film"></i>
+                        <p>Behind the scene</p>
                     </a>
                 </li>
-                <li class="active">
-                    <a href="dance_styles.php">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Dance_Styles</p>
+                <li>
+                    <a href="icons.php">
+                        <i class="pe-7s-loop"></i>
+                        <p>Dance Icons</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons.php">
+                        <i class="pe-7s-like"></i>
+                        <p>reviews</p>
                     </a>
                 </li>
                 <li>
