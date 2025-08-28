@@ -212,18 +212,18 @@ if (isset($_POST['update']))
         country='$country',
         postal_code='$postal_code',
         about_me='$about_me',
-        WHERE admin_id=1";
+        WHERE admin_id=1 ";
 
     if ($conn->query($update)) 
     {
         echo "<script>
-        showCustomNotification('top','right','success','Data Updated Successfully!');
+        demo.showCustomNotification('top','right','success','Data Updated Successfully!');
         
         </script>";
 
     } else {
         echo "<script>
-        showCustomNotification('top','right','success','Failed to Update Data!');</script>
+        demo.showCustomNotification('top','right','success','Failed to Update Data!');</script>
         setTimeout(function(){ location.reload(); }, 2000); 
         </script>";
     }
