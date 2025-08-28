@@ -1048,15 +1048,46 @@ include 'connection.php';
 
                                           <div class="contact-form-body">
                                             <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-12">
-                                                    <input type="tel" name="contact-no" id="contact-no"
-                                                        class="form-control" placeholder="Whatsapp Contact"
-                                                        oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
-                                                        pattern="^\+?[1-9]\d{6,14}$" maxlength="10" required>
-                                            
-                                                    </div>
-                                                </div>
+                                                        <div class="col-lg-4 col-md-4 col-12">
+                                                            <select d="input-groupd" name="country-code" class="form-control" style="max-width: 13 0px;">
+                                                                <option value="+91" selected>🇮🇳 India (+91)</option>
+                                                                <option value="+1">🇺🇸 USA (+1)</option>
+                                                                <option value="+44">🇬🇧 UK (+44)</option>
+                                                                <option value="+61">🇦🇺 Australia (+61)</option>
+                                                                <option value="+971">🇦🇪 UAE (+971)</option>
+                                                                <!-- add more as needed -->
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-8 col-md-8 col-12">
+                                                            <input type="tel" name="contact-no" id="contact-no"
+                                                                class="form-control"
+                                                                placeholder="Enter WhatsApp Number"
+                                                                oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+                                                                required>
+                                                        </div>
+                                                        <!-- <input type="tel" name="contact-no" id="contact-no"
+                                                            class="form-control" placeholder="+91 Whatsapp Contact"
+                                                            oninput="this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);"
+                                                            pattern="^\+?[1-9]\d{6,14}$" maxlength="10" required> -->
+                                                
+                                            </div>
                                         </div>
+                                       
+                                        <script>
+                                            const countryCode = document.getElementById("country-code");
+                                            const contactNo = document.getElementById("contact-no");
+
+                                            function updatePattern() {
+                                                // pattern for E.164 format: countryCode + 6–14 digits
+                                                let code = countryCode.value.replace('+', '');
+                                                contactNo.pattern = "^[0-9]{6,14}$"; // local part validation only
+                                            }
+
+                                            // Run once & on change
+                                            updatePattern();
+                                            countryCode.addEventListener("change", updatePattern);
+                                        </script>
+
 
                                         <div class="row">
                                             <fieldset class="mb-6">
